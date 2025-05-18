@@ -1,0 +1,13 @@
+filename = input("Назва файлу: ")
+try:
+    with open(filename, "r", encoding="utf-8") as f:
+        text = f.read()
+        рядки = text.splitlines()
+        слова = text.split()
+        символи = len(text)
+    print("Аналіз файлу:")
+    print(f"Рядків   : {len(рядки)}")
+    print(f"Слів     : {len(слова)}")
+    print(f"Символів : {символи}")
+except FileNotFoundError:
+    print("Файл не знайдено")
